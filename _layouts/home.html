@@ -31,13 +31,6 @@ layout: default
         Посмотреть цифры
       </a>
     </div>
-    {% if site.contact_channels_section %}
-    <p class="mt-4">
-      {{ site.data[site.active_lang].strings.home.contact_me | default:
-      site.data['ru'].strings.home.contact_me}}
-    </p>
-
-    {%include contact_channels.html %} {% endif %}
   </div>
 </section>
 
