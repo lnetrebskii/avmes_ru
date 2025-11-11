@@ -6,7 +6,7 @@ layout: default
   id="main"
   class="flex flex-col md:flex-row items-center justify-center py-16 md:h-screen border-b-2 dark:border-0"
 >
-  <div class="md:mx-2" data-motion="fadeInLeft">
+  <div class="hidden md:block md:mx-2" data-motion="fadeInLeft">
     <img
       class="object-cover w-full h-full sm:w-80 sm:h-80 sm:rounded-full"
       src="{{ page.image | relative_url | default: 'https://ik.imagekit.io/ikmedia/avif_samples/photo3_avif_6O32dW2NT.png' }}"
@@ -386,7 +386,7 @@ layout: default
 
 <div
   id="dot-nav"
-  class="fixed left-0 top-1/2 transform -translate-y-1/2 space-y-4 bg-white/80 rounded-r-lg p-4"
+  class="fixed left-0 top-1/2 transform -translate-y-1/2 space-y-4 bg-white/80 rounded-r-lg p-4 hidden md:block"
 >
   <a
     href="#main"
