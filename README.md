@@ -186,6 +186,26 @@ If you want to have a custom [favicon](https://en.wikipedia.org/wiki/Favicon) fo
 
 _Note: This theme already contains a file `assets/images/logo.avif`, and so if you create a new one in your site, then it will overwrite the theme file._
 
+## Tailwind CSS workflow
+
+This project now ships with a local Tailwind CSS toolchain so you can freely use any utility class in your layouts and posts.
+
+1. Install Node dependencies once:
+   ```bash
+   npm install
+   ```
+2. During development run the watcher to rebuild the bundled stylesheet:
+   ```bash
+   npm run watch:css
+   ```
+   The compiled file is written to `assets/css/dist-style.css`, which is already referenced from the layouts.
+3. For one-off builds (e.g. before committing) run:
+   ```bash
+   npm run build:css
+   ```
+
+The Tailwind scan is configured to cover layouts, includes, Markdown posts/projects, and scripts, so any class you add in the repo will be picked up automatically.
+
 ## Plugins
 
 The Awesome Jekyll theme comes with the [`jekyll-seo-tag`](https://github.com/jekyll/jekyll-seo-tag) plugin preinstalled to ensure your website gets the most useful meta tags. See [usage](https://github.com/jekyll/jekyll-seo-tag#usage) to learn how to set it up.

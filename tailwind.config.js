@@ -2,9 +2,10 @@
 module.exports = {
   darkMode: "class",
   content: [
-    '*.html',
-    '_layouts/**/*.html',
-    '_includes/**/*.html'
+    './**/*.{html,md,markdown,liquid}',
+    './assets/js/**/*.{js,ts}',
+    '!./node_modules/**',
+    '!./_site/**'
   ],
   theme: {
     fontFamily: {
