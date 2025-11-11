@@ -35,8 +35,8 @@ plugins:
 ##
 # Polyglot configuration
 ##
-languages: ["en"]
-default_lang: "en"
+languages: ["ru"]
+default_lang: "ru"
 exclude_from_localization: ["javascript", "images", "css", "public"]
 parallel_localization: true
 
