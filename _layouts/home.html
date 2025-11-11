@@ -4,7 +4,7 @@ layout: default
 
 <section
   id="main"
-  class="flex flex-col md:flex-row items-center justify-center py-16 md:h-screen border-b-2 dark:border-0"
+  class="relative flex flex-col md:flex-row items-center justify-center py-16 md:h-screen border-b-2 dark:border-0 overflow-hidden"
 >
   <div class="hidden md:block md:mx-2" data-motion="fadeInLeft">
     <img
@@ -40,6 +40,14 @@ layout: default
     {%include contact_channels.html %} {% endif %}
   </div>
 </section>
+
+<div class="pointer-events-none block md:hidden">
+  <div class="relative mx-auto flex h-20 w-20 -mt-16 items-center justify-center">
+    <div class="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-transparent via-white/40 to-white dark:via-slate-900/40 dark:to-slate-900"></div>
+    <span class="relative flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 bg-white/90 text-slate-500 shadow-md dark:border-slate-700 dark:bg-slate-800/90 dark:text-slate-200 animate-bounce">⌄</span>
+    <span class="sr-only">Прокрутите вниз</span>
+  </div>
+</div>
 
 {% if page.stats and page.stats.items %}
 <section
