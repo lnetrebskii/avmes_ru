@@ -310,6 +310,13 @@ layout: default
   id="contact"
   class="bg-slate-900 py-16 text-white dark:bg-slate-900"
 >
+  {% assign contacts = site.contact_channels %}
+  {% assign cta_link = page.cta.action_url %}
+  {% if cta_link == nil or cta_link == '' %}
+    {% if contacts.email %}
+      {% assign cta_link = 'mailto:' | append: contacts.email %}
+    {% endif %}
+  {% endif %}
   <div class="container mx-auto px-4">
     <div class="mx-auto max-w-3xl text-center" data-motion="fadeInUp">
       {% if page.cta.title %}
@@ -318,21 +325,45 @@ layout: default
       {% if page.cta.subtitle %}
       <p class="mt-3 text-lg text-slate-300">{{ page.cta.subtitle }}</p>
       {% endif %}
-      {% if page.cta.action_text and page.cta.action_url %}
+      {% if page.cta.action_text and cta_link %}
       <div class="mt-8">
         <a
-          href="{{ page.cta.action_url }}"
+          href="https://arendavmeste.ru/?utm_source=avmes.ru"
+          target="_blank"
+          rel="noopener"
           class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white px-8 py-3 text-base font-semibold text-slate-900 shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl"
         >
           {{ page.cta.action_text }}
         </a>
       </div>
       {% endif %}
-      {% if page.cta.footer %}
-      <p class="mt-10 whitespace-pre-line text-base leading-relaxed text-slate-200">
-        {{ page.cta.footer }}
-      </p>
-      {% endif %}
+
+      <div class="mt-10 space-y-3 text-base leading-relaxed text-slate-200">
+        <p>
+          🔗
+          <a href="https://arendavmeste.ru/register?utm_source=avmes.ru" target="_blank" rel="noopener"
+            class="underline decoration-2 underline-offset-2 text-white">
+            arendavmeste.ru ↗
+          </a>
+        </p>
+        {% if contacts.email %}
+        <p>
+          📧
+          <a href="mailto:{{ contacts.email }}" class="underline decoration-2 underline-offset-2 text-white">
+            {{ contacts.email }}
+          </a>
+        </p>
+        {% endif %}
+        {% if contacts.telegram %}
+        <p>
+          💬
+          <a href="{{ contacts.telegram }}" target="_blank" rel="noopener"
+            class="underline decoration-2 underline-offset-2 text-white">
+            @kindofdev
+          </a>
+        </p>
+        {% endif %}
+      </div>
     </div>
   </div>
 </section>

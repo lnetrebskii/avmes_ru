@@ -21,14 +21,21 @@
     {% include footer.html %}
     <script>
       document.querySelectorAll("a").forEach(function (link) {
+        const opensInNewTab = link.getAttribute("target") === "_blank";
+        const noAnimation = link.hasAttribute("data-no-animate");
+
+        if (opensInNewTab || noAnimation) {
+          return;
+        }
+
         link.addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent the default link action temporarily
+          event.preventDefault();
           link.classList.add("gentle-clicked");
 
           setTimeout(function () {
             link.classList.remove("gentle-clicked");
-            window.location.href = link.href; // Navigate to the link after the animation
-          }, 300); // Duration of the gentle bounce animation
+            window.location.href = link.href;
+          }, 300);
         });
       });
     </script>

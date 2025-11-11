@@ -15,9 +15,9 @@ baseurl: /awesome-jekyll-theme
 ##
 contact_channels_section: true
 contact_channels:
-  # email: "example@example.cl"
-  github: "https://github.com/a-chacon"
-  # telegram: "https://t.me/"
+  email: "leonid@netrebskiy.ru"
+  #github: "https://github.com/a-chacon"
+  telegram: "https://t.me/kindofdev"
   # stackoverflow: "https://stackoverflow.com"
   # discord: "https://discord.com/"
   # mastodon: "https://lile.cl/"
