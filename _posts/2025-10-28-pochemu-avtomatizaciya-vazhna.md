@@ -1,5 +1,5 @@
 ---
-layout: blog_post
+layout: post
 title: "Почему офис должен окупать себя автоматически"
 description: "Что даёт автоматизация аренды и как ArendaVmeste развязывает руки владельцу пространства."
 reading_time: 4 мин чтения

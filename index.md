@@ -6,19 +6,11 @@ description: >-
   en diversas etapas del ciclo de desarrollo de aplicaciones.
 image: /assets/images/main.avif
 main_content: >
-  # Hello Friend. Hello World.
+  # Ваш офис окупает сам себя
 
+  **Автоматизация сдачи офиса в свободное время — без рутины, с полным контролем**
 
-  **Solum remis procul; poenam, corde?** Te quoque facti agros, querorque,
-  excutis
-
-  quoque vestigia substricta caelestique posuisset litore: suaque. **Et
-  limine**, et
-
-  nimium nec io diemque vocat spicea et horror licet leto fortuna suis cum.
-  **Lecto viae, quod Naxos tumulos quoque.** Et illo de nati iuvenci oris habet,
-  perdidit parantur! **#Rails #Ruby #Python #HTML #Css #Js #AWS**
-footer: true
+footer: false
 permalink: /
 ---
 ## Hello World
