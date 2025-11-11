@@ -47,7 +47,7 @@ layout: default
   class="bg-slate-50 py-16 dark:bg-slate-900/70"
 >
   <div class="container mx-auto px-4">
-    <div class="mx-auto max-w-2xl text-center">
+    <div class="mx-auto max-w-2xl text-center" data-motion="fadeInUp">
       {% if page.stats.title %}
       <h2 class="text-3xl font-bold text-slate-900 dark:text-white">{{ page.stats.title }}</h2>
       {% endif %}
@@ -57,10 +57,11 @@ layout: default
       </p>
       {% endif %}
     </div>
-    <div class="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4" data-motion="stagger-cards">
       {% for stat in page.stats.items %}
       <article
         class="flex flex-col items-center rounded-2xl border border-slate-200 bg-white/80 px-6 py-8 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-700 dark:bg-slate-800/60"
+        data-motion="fadeInUp"
       >
         <span class="text-4xl font-black text-slate-900 dark:text-white">{{ stat.number }}</span>
         {% if stat.label %}
