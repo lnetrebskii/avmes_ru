@@ -153,6 +153,61 @@ layout: default
 </section>
 {% endif %}
 
+
+{% if page.economics %}
+<section
+  id="economics-details"
+  class="bg-white py-16 dark:bg-slate-950"
+>
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center" data-motion="fadeInUp">
+      {% if page.economics.title %}
+      <h2 class="text-3xl font-bold text-slate-900 dark:text-white">{{ page.economics.title }}</h2>
+      {% endif %}
+      {% if page.economics.subtitle %}
+      <p class="mt-2 text-lg font-medium text-slate-700 dark:text-slate-200">{{ page.economics.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    <div class="mt-12 grid gap-10 lg:grid-cols-[1.1fr,1fr]" data-motion="stagger-cards">
+      <div class="rounded-3xl bg-slate-900 px-8 py-10 text-white shadow-2xl dark:bg-slate-100 dark:text-slate-900" data-motion="fadeInLeft">
+        {% if page.economics.summary %}
+        <div class="text-lg leading-relaxed opacity-90">
+          {{ page.economics.summary | markdownify }}
+        </div>
+        {% endif %}
+        {% if page.economics.net_income %}
+        <div class="mt-8 text-5xl font-black tracking-tight">{{ page.economics.net_income }}</div>
+        {% endif %}
+        {% if page.economics.net_caption %}
+        <p class="mt-2 text-base font-medium opacity-80">{{ page.economics.net_caption }}</p>
+        {% endif %}
+        {% if page.economics.investments %}
+        <div class="mt-8 rounded-2xl bg-white/10 px-5 py-4 text-sm leading-relaxed backdrop-blur dark:bg-slate-900/10">
+          {{ page.economics.investments }}
+        </div>
+        {% endif %}
+      </div>
+
+      {% if page.economics.highlights %}
+      <div class="space-y-6" data-motion="fadeInRight">
+        {% for highlight in page.economics.highlights %}
+        <article class="rounded-2xl border border-slate-200 bg-white px-6 py-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-slate-700 dark:bg-slate-900/60">
+          {% if highlight.title %}
+          <h3 class="text-xl font-semibold text-slate-900 dark:text-white">{{ highlight.title }}</h3>
+          {% endif %}
+          {% if highlight.description %}
+          <p class="mt-2 text-base text-slate-600 dark:text-slate-300">{{ highlight.description }}</p>
+          {% endif %}
+        </article>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 {% if site.posts.size > 0 %}
 <section
   id="blog"
