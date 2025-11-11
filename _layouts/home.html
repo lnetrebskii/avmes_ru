@@ -109,6 +109,45 @@ layout: default
 </section>
 {% endif %}
 
+{% if page.solution %}
+<section
+  id="solution"
+  class="bg-slate-50 py-16 dark:bg-slate-900/60"
+>
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center" data-motion="fadeInUp">
+      {% if page.solution.title %}
+      <h2 class="text-3xl font-bold text-slate-900 dark:text-white">{{ page.solution.title }}</h2>
+      {% endif %}
+    </div>
+    <div class="mt-12 grid gap-10 lg:grid-cols-[1.1fr,1fr] lg:items-start" data-motion="stagger-cards">
+      {% if page.solution.steps %}
+      <div class="space-y-4" data-motion="fadeInUp">
+        <ul class="space-y-4">
+          {% for step in page.solution.steps %}
+          <li class="flex items-start gap-3 rounded-xl border border-slate-200 bg-white px-5 py-4 text-left shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-700 dark:bg-slate-800/60">
+            <span class="mt-1 text-slate-500 dark:text-slate-300">➜</span>
+            <span class="text-base font-medium text-slate-800 dark:text-slate-100">{{ step }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+      <div class="rounded-2xl border border-slate-200 bg-white px-6 py-8 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-700 dark:bg-slate-800/60" data-motion="fadeInUp">
+        {% if page.solution.how_it_works_title %}
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">{{ page.solution.how_it_works_title }}</h3>
+        {% endif %}
+        {% if page.solution.how_it_works_body %}
+        <p class="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-300">
+          {{ page.solution.how_it_works_body }}
+        </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 {% if site.posts.size > 0 %}
 <section
   id="blog"
@@ -202,6 +241,13 @@ layout: default
   <a
     href="#problem"
     aria-label="Jump to problem section"
+    class="dot w-3 h-3 block rounded-full border-2 border-gray-800 hover:scale-125"
+  ></a>
+  {% endif %}
+  {% if page.solution %}
+  <a
+    href="#solution"
+    aria-label="Jump to solution section"
     class="dot w-3 h-3 block rounded-full border-2 border-gray-800 hover:scale-125"
   ></a>
   {% endif %}
