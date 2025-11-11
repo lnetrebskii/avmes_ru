@@ -29,15 +29,11 @@ Ideal for portfolios, blogs, and project showcases with responsive layouts and e
 
 ![blog page of theme](https://raw.githubusercontent.com/a-chacon/awesome-jekyll-theme/main/screenshots/blog.png)
 
-### Projects Layout
-
-![projects page of theme](https://raw.githubusercontent.com/a-chacon/awesome-jekyll-theme/main/screenshots/projects.png)
-
 ## Features
 
 1. **Clean and minimalist design** with ample white space, focusing on content readability and visual appeal.
 
-2. Versatile layout options including a **grid-style projects page**, a **blog listing with featured posts**, and a simple yet elegant **home page** with a circular profile image.
+2. Versatile layout options including a **blog listing с карточками**, и простая, но элегантная **домашняя страница** с круговым фото профиля.
 
 3. **Consistent navigation** with a header menu and social media integration in the footer, providing a **cohesive user experience** across different page types.
 
@@ -132,8 +128,6 @@ This theme provides several **layouts** for different types of pages. Each layou
 
 - **Home Layout**: Main landing page layout. Displays a profile image, main content area, and reference to blog and project section.
 
-- **Projects Layout**: Used to **list a collection of projects**. Requires collection configuration in your `_config.yml`.
-
 - **Blog Layout**: Builds a **blog page with posts**. Displays posts sorted by date with optional category filtering.
 
 - **Post Layout**: Used for **individual blog posts**. Supports various metadata like categories, excerpts, and author information.
@@ -204,7 +198,7 @@ This project now ships with a local Tailwind CSS toolchain so you can freely use
    npm run build:css
    ```
 
-The Tailwind scan is configured to cover layouts, includes, Markdown posts/projects, and scripts, so any class you add in the repo will be picked up automatically.
+The Tailwind scan is configured to cover layouts, includes, Markdown posts, and scripts, so any class you add in the repo will be picked up automatically.
 
 ## Plugins
 

@@ -5,9 +5,6 @@ baseurl: /awesome-jekyll-theme
 ##
 # Collections configuration
 ##
-collections:
-  projects:
-    output: true
 
 ##
 # Contact Channels configuration
