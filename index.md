@@ -56,6 +56,13 @@ economics:
 testimonials:
   title: "Что говорят арендаторы"
   subtitle: "Реальные отзывы с Авито"
+  images:
+    - /assets/images/testimorials/IMG_4806.jpg
+    - /assets/images/testimorials/IMG_4807.jpg
+    - /assets/images/testimorials/IMG_4808.jpg
+    - /assets/images/testimorials/IMG_4809.jpg
+    - /assets/images/testimorials/IMG_4811.jpg
+    - /assets/images/testimorials/IMG_4812.jpg
   items:
     - text: >
         «Все автоматизировано, хороший ремонт, удобное бронирование. Не знаю как часто, но буду бывать точно. Уже забронировал ещё несколько окошек.»
