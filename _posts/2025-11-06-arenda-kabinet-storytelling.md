@@ -5,6 +5,7 @@ description: "История владельца кабинета, который
 reading_time: 6 мин чтения
 permalink: /blog/kabinet-samara-avtomatizacija/
 excerpt_separator: <!--more-->
+image: /assets/images/posts/kabinet-samara-storytelling.jpg
 ---
 
 Сейчас 3 часа ночи. Вы спите. А в это время кто-то бронирует ваш офис на завтра, оплачивает онлайн и получает автоматический код доступа. Утром вы просыпаетесь — на счёте уже лежат деньги. Вы даже не прикасались к телефону.

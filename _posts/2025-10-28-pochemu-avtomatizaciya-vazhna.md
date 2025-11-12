@@ -5,6 +5,7 @@ description: "Что даёт автоматизация аренды и как 
 reading_time: 4 мин чтения
 permalink: /blog/pochemu-avtomatizaciya-arendy/
 excerpt_separator: <!--more-->
+image: /assets/images/posts/psiholog-anna-avtomatizaciya.jpg
 ---
 
 Когда мы запускали ArendaVmeste, идея была простой: офис не должен быть расходом. Он способен приносить прибыль даже тогда, когда вы не на месте. Автоматизация бронирований, оплат и доступа превращает помещение в сервис, который работает 24/7.
