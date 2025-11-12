@@ -197,5 +197,56 @@
         })
       })
     </script>
+
+    <!-- Booking Widget -->
+    <script>
+      (function() {
+        // Функция инициализации виджетов
+        function initializeBookingWidgets() {
+          if (typeof BookingWidget === 'undefined') {
+            console.warn('BookingWidget is not loaded yet');
+            return;
+          }
+
+          const bookingButtons = document.querySelectorAll('[id^="book-btn-"]');
+          
+          bookingButtons.forEach(button => {
+            const officeId = button.id.replace('book-btn-', '');
+            
+            try {
+              BookingWidget.init({
+                officeId: officeId,
+                button: button
+              });
+              console.log('Initialized booking widget for office:', officeId);
+            } catch (error) {
+              console.error('Failed to initialize booking widget for office:', officeId, error);
+            }
+          });
+        }
+
+        // Загружаем скрипт виджета
+        var script = document.createElement('script');
+        script.src = 'https://arendavmeste.ru/widget/widget.js';
+        script.async = true;
+        
+        script.onload = function() {
+          console.log('BookingWidget script loaded successfully');
+          // Инициализируем после загрузки скрипта
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeBookingWidgets);
+          } else {
+            initializeBookingWidgets();
+          }
+        };
+        
+        script.onerror = function() {
+          console.error('Failed to load BookingWidget script');
+        };
+        
+        document.head.appendChild(script);
+      })();
+    </script>
+    <!-- /Booking Widget -->
   </body>
 </html>
