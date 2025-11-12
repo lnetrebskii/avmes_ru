@@ -2,7 +2,7 @@
 layout: default
 title: Отзывы арендаторов
 lead: Реальные отзывы наших клиентов с Авито
-nav: true
+nav: false
 permalink: /testimonials/
 ---
 
