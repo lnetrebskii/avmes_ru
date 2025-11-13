@@ -3,3 +3,49 @@
 <link rel="icon" type="image/avif" href="{{ site.logo | relative_url }}" />
 {% endif %}
 
+{% if page.layout == 'home' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Аренда Вместе",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "1500",
+    "priceCurrency": "RUB"
+  },
+  "description": "{{ page.description | default: site.description | strip_html | escape }}",
+  "url": "{{ site.url }}{{ site.baseurl }}",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "50"
+  },
+  "featureList": [
+    "Онлайн бронирование 24/7",
+    "Умные замки с автоматическим доступом",
+    "Автоматические платежи",
+    "Интеграция с календарем",
+    "Аналитика и отчеты"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Аренда Вместе",
+  "url": "{{ site.url }}{{ site.baseurl }}",
+  "logo": "{{ site.url }}{{ site.baseurl }}{{ site.logo }}",
+  "description": "{{ site.description | strip_html | escape }}",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "{{ site.contact_channels.email }}",
+    "contactType": "customer service"
+  }
+}
+</script>
+{% endif %}
+

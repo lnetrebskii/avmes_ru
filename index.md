@@ -1,9 +1,10 @@
 ---
 layout: home
-title: Home
+title: Автоматизация аренды офисов и кабинетов | Система бронирования онлайн 24/7
 description: >-
-  Especializado en el desarrollo de API RESTs con Ruby on Rails. He participado
-  en diversas etapas del ciclo de desarrollo de aplicaciones.
+  Автоматизируйте сдачу офиса в свободное время. Бронирование онлайн, умные замки, 
+  автоматические платежи. Монетизируйте простаивающие помещения без рутины. 
+  Подходит для психологов, консультантов, мастеров. Работает 24/7.
 image: /assets/images/main.avif
 main_content: >
   # Ваш офис окупает сам себя

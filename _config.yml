@@ -1,6 +1,26 @@
 title: Аренда Вместе
 logo: /assets/images/logo.avif
 baseurl:
+url: https://arendavmeste.ru
+description: >-
+  Онлайн бронирование офисов и кабинетов. Умные замки, автоматические платежи. Подходит для психологов, консультантов, мастеров.
+keywords: >-
+  онлайн бронирование офиса, бронирование кабинета, бронирование офиса онлайн, система бронирования, 
+  автоматизация аренды, умный замок для офиса, аренда кабинета психолога, 
+  аренда помещения, онлайн бронирование, автоматическая аренда
+author: Аренда Вместе
+twitter:
+  username: arendavmeste
+  card: summary_large_image
+github:
+  username: 
+facebook:
+  app_id: 
+  publisher: 
+  admins: 
+google_site_verification: 
+lang: ru
+locale: ru_RU
 
 ##
 # Collections configuration
