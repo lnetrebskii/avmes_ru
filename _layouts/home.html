@@ -13,7 +13,7 @@ layout: default
       alt="{{ page.description }}"
     />
   </div>
-  <div class="fadeIn mx-4 w-4/5 md:w-2/5 text-center md:text-left mt-6 md:mt-0" data-motion="fadeInRight">
+  <div class="fadeIn mx-4 w-4/5 md:w-2/5 text-center md:text-left mt-6 md:mt-0">
     <div class="prose md:prose-lg prose-h1:text-4xl prose-h2:text-3xl prose-h1:mb-1 dark:prose-invert">
       {{ page.main_content | markdownify }}
     </div>
@@ -183,7 +183,7 @@ layout: default
       </div>
 
       {% if page.economics.highlights %}
-      <div class="space-y-6" data-motion="fadeInRight">
+      <div class="space-y-6">
         {% for highlight in page.economics.highlights %}
         <article class="rounded-2xl border border-slate-200 bg-white px-6 py-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-slate-700 dark:bg-slate-900/60">
           {% if highlight.title %}
