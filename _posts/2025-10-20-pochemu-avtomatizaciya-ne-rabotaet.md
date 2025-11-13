@@ -96,20 +96,9 @@ image: /assets/images/posts/pochemu-avtomatizaciya-ne-rabotaet.jpg
 
 ## Хватит работать вручную
 
-Если вы устали передавать ключи, одобрять каждое бронирование и считать скидки в Excel — подключите свой офис или кабинет к [АрендаВместе](https://arendavmeste.ru). Мы настроим всё за пять дней: умный замок, расписание, автоматические платежи. Вы сможете уехать в отпуск и получать только уведомления о поступлении денег.
+Если вы устали передавать ключи, одобрять каждое бронирование и считать скидки в Excel — подключите свой офис или кабинет к [АрендаВместе](https://arendavmeste.ru). Вы можете начать принимать бронирования и платежи уже сейчас. Умный замок или умную ключницу можно добавить позже — система работает и без них.
 
-<div style="text-align: center; margin: 2rem 0;">
-  <a
-    href="https://arendavmeste.ru/?createOffice=true&autoAuth=true"
-    target="_blank"
-    rel="noopener"
-    style="display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; border: 2px solid #0f172a; background-color: #0f172a; color: white; padding: 0.75rem 2rem; font-weight: 600; text-decoration: none; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.2s;"
-    onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.1)';"
-    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 15px -3px rgba(0, 0, 0, 0.1)';"
-  >
-    Зарегистрироваться и разместить локацию
-  </a>
-</div>
+{% include cta_button.html %}
 
 Или напишите в [Telegram](https://t.me/kindofdev) — расскажем, как это работает для вашего кабинета.
 
