@@ -66,4 +66,4 @@ image: /assets/images/posts/kabinet-samara-storytelling.jpg
 
 {% include cta_button.html %}
 
-Или напишите в [Telegram](https://t.me/kindofdev) — расскажем, как автоматизировать ваш кабинет.
+Присоединяйтесь к [Telegram каналу](https://t.me/ArendaVmeste) — там другие статьи и инструкции. Там можно оставить комментарий и задать вопрос.

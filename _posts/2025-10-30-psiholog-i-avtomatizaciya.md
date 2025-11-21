@@ -46,4 +46,4 @@ image: /assets/images/posts/pochemu-avtomatizaciya-vazhna.jpg
 
 {% include cta_button.html %}
 
-Или напишите в [Telegram](https://t.me/kindofdev) — расскажем, как это работает для вашего кабинета.
+Присоединяйтесь к [Telegram каналу](https://t.me/ArendaVmeste) — там другие статьи и инструкции. Там можно оставить комментарий и задать вопрос.

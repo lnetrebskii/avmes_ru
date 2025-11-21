@@ -217,5 +217,5 @@ image: /assets/images/posts/sbercrm-tutorial/main.PNG
 
 {% include cta_button.html %}
 
-Или напишите в [Telegram](https://t.me/kindofdev) — расскажу, как моя система решает задачи, которые не покрывает бесплатная версия, и покажу на примере вашего кабинета.
+Присоединяйтесь к [Telegram каналу](https://t.me/ArendaVmeste) — там другие статьи и инструкции. Там можно оставить комментарий и задать вопрос.
 

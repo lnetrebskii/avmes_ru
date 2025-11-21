@@ -37,4 +37,4 @@ image: /assets/images/posts/psiholog-anna-avtomatizaciya.jpg
 
 {% include cta_button.html %}
 
-Или напишите в [Telegram](https://t.me/kindofdev) — расскажем, как автоматизировать ваш офис.
+Присоединяйтесь к [Telegram каналу](https://t.me/ArendaVmeste) — там другие статьи и инструкции. Там можно оставить комментарий и задать вопрос.
