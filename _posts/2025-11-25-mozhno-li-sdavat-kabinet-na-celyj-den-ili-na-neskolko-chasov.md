@@ -5,7 +5,7 @@ description: "Клиент спросил: можно ли сдавать каб
 reading_time: 6 мин чтения
 permalink: /blog/mozhno-li-sdavat-kabinet-na-celyj-den-ili-na-neskolko-chasov/
 excerpt_separator: <!--more-->
-image: /assets/images/posts/pochemu-avtomatizaciya-vazhna.jpg
+image: /assets/images/posts/mozhno-li-sdavat-kabinet-na-celyj-den-ili-na-neskolko-chasov.png
 ---
 
 Недавно клиент задал вопрос, который часто возникает у владельцев кабинетов:
