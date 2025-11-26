@@ -104,7 +104,7 @@ pricing:
   plans:
     - name: "Базовый"
       price: "0"
-      period: "навсегда"
+      period: "&nbsp;"
       features:
         - "Настройка расписания"
         - "Календарь доступности для клиентов"
@@ -128,6 +128,7 @@ pricing:
         - "Бот Авито"
       button_text: "Попробовать 60 дней бесплатно"
       button_link: "https://arendavmeste.ru/?createOffice=true&autoAuth=true"
+      downgrade_note: "Можно перейти на Базовый тариф в любой момент"
       popular: true
 cta:
   title: "Подключите офис сейчас"
