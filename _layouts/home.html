@@ -534,7 +534,7 @@ layout: default
     <div class="mt-12 grid gap-8 md:grid-cols-2 max-w-5xl mx-auto" data-motion="stagger-cards">
       {% for plan in page.pricing.plans %}
       <article
-        class="relative flex flex-col rounded-3xl border-2 {% if plan.popular %}border-slate-900 bg-white shadow-2xl dark:border-slate-100 dark:bg-slate-800/80{% else %}border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-800/60{% endif %} px-8 py-10 transition hover:-translate-y-1 hover:shadow-xl"
+        class="relative flex flex-col rounded-3xl border-2 {% if plan.popular %}border-slate-900 bg-white shadow-2xl dark:border-slate-100 dark:bg-slate-900 dark:shadow-2xl{% else %}border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-800/60{% endif %} px-8 py-10 transition hover:-translate-y-1 hover:shadow-xl"
         data-motion="fadeInUp"
       >
         {% if plan.popular %}
