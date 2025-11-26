@@ -99,12 +99,10 @@ advantages:
       description: "Постоянные клиенты поддерживают чистоту. Себестоимость обслуживания стремится к нулю."
 pricing:
   title: "Тарифы"
-  subtitle: "Выберите подходящий план"
-  trial_badge: "60 дней пробного периода Про"
   plans:
-    - name: "Базовый"
+    - name: "Тариф Базовый"
       price: "0"
-      period: "&nbsp;"
+      period: "Ежемесячные платежи отсутствуют"
       features:
         - "Настройка расписания"
         - "Календарь доступности для клиентов"
@@ -114,11 +112,11 @@ pricing:
       button_text: "Начать бесплатно"
       button_link: "https://arendavmeste.ru/?createOffice=true&autoAuth=true"
       popular: false
-    - name: "Про"
+    - name: "Тариф Профессиональный"
       price_yearly: "1 500"
-      period_yearly: "в месяц при оплате за год"
+      period_yearly: "за кабинет при оплате за год"
       price_monthly: "1 900"
-      period_monthly: "в месяц при помесячной оплате"
+      period_monthly: "за кабинет при помесячной оплате"
       features:
         - "Настройка расписания"
         - "Календарь доступности для клиентов"

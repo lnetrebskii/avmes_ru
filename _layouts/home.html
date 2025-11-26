@@ -495,17 +495,6 @@ layout: default
       {% if page.pricing.title %}
       <h2 class="text-3xl font-bold text-slate-900 dark:text-white">{{ page.pricing.title }}</h2>
       {% endif %}
-      {% if page.pricing.subtitle %}
-      <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">{{ page.pricing.subtitle }}</p>
-      {% endif %}
-      {% if page.pricing.trial_badge %}
-      <div class="mt-4 inline-flex items-center rounded-full bg-green-100 px-4 py-2 text-sm font-semibold text-green-800 dark:bg-green-900/30 dark:text-green-300">
-        <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-        </svg>
-        {{ page.pricing.trial_badge }}
-      </div>
-      {% endif %}
     </div>
 
     {% assign pro_plan = page.pricing.plans | where: "popular", true | first %}
@@ -558,7 +547,7 @@ layout: default
                 <div class="pricing-price-yearly">
                   <div class="flex items-baseline justify-center gap-2">
                     <span class="text-5xl font-black text-slate-900 dark:text-white">{{ plan.price_yearly }}</span>
-                    <span class="text-xl text-slate-600 dark:text-slate-300">₽</span>
+                    <span class="text-xl text-slate-600 dark:text-slate-300">₽/мес.</span>
                   </div>
                   {% if plan.period_yearly %}
                   <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">{{ plan.period_yearly }}</p>
@@ -567,7 +556,7 @@ layout: default
                 <div class="pricing-price-monthly hidden">
                   <div class="flex items-baseline justify-center gap-2">
                     <span class="text-5xl font-black text-slate-900 dark:text-white">{{ plan.price_monthly }}</span>
-                    <span class="text-xl text-slate-600 dark:text-slate-300">₽</span>
+                    <span class="text-xl text-slate-600 dark:text-slate-300">₽/мес.</span>
                   </div>
                   {% if plan.period_monthly %}
                   <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">{{ plan.period_monthly }}</p>
@@ -605,7 +594,7 @@ layout: default
           {% endif %}
 
           {% if plan.button_text and plan.button_link %}
-          <div class="pt-10 pb-0">
+          <div class="mt-8 pt-10 pb-0">
             <a
               href="{{ plan.button_link }}"
               target="_blank"
