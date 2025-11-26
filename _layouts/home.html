@@ -214,10 +214,40 @@ layout: default
       {% if page.testimonials.title %}
       <h2 class="text-3xl font-bold text-slate-900 dark:text-white">{{ page.testimonials.title }}</h2>
       {% endif %}
-      {% if page.testimonials.subtitle %}
-      <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">{{ page.testimonials.subtitle }}</p>
-      {% endif %}
     </div>
+    
+    {% comment %} Video Testimonials {% endcomment %}
+    {% if page.testimonials.videos and page.testimonials.videos.size > 0 %}
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16 max-w-6xl mx-auto">
+      {% for video in page.testimonials.videos %}
+      <div class="flex flex-col">
+        <div class="overflow-hidden rounded-xl bg-slate-900" style="aspect-ratio: 360/640;">
+          <iframe 
+            src="{{ video.embed_url }}" 
+            width="{{ video.width | default: 360 }}" 
+            height="{{ video.height | default: 640 }}"
+            class="h-full w-full"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" 
+            frameborder="0" 
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div class="pt-6">
+          {% if video.name %}
+          <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">{{ video.name }}</h3>
+          {% endif %}
+          {% if video.role %}
+          <p class="mt-1 text-base font-medium text-slate-600 dark:text-slate-400">{{ video.role }}</p>
+          {% endif %}
+          {% if video.description %}
+          <p class="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-300">{{ video.description }}</p>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
     
     {% comment %} Testimonial Images Gallery {% endcomment %}
     {% if page.testimonials.images and page.testimonials.images.size > 0 %}

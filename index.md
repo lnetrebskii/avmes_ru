@@ -56,7 +56,19 @@ economics:
       description: "Более половины арендаторов пользуются офисом 6 месяцев и дольше."
 testimonials:
   title: "Что говорят арендаторы"
-  subtitle: "Реальные отзывы с Авито"
+  videos:
+    - name: "Маргарита"
+      role: "сдает кабинет"
+      description: "Как стала экономить время, разместив свой кабинет на Аренда Вместе."
+      embed_url: "https://vkvideo.ru/video_ext.php?oid=-234209900&id=456239021&hash=72bd498f819a9dc7&hd=2"
+      width: 360
+      height: 640
+    - name: "Елена"
+      role: "снимает кабинет"
+      description: "Почему ей нравится снимать кабинет на Аренда Вместе."
+      embed_url: "https://vkvideo.ru/video_ext.php?oid=-234209900&id=456239022&autoplay=1"
+      width: 325
+      height: 646
   images:
     - /assets/images/testimorials/IMG_4806.jpg
     - /assets/images/testimorials/IMG_4807.jpg
