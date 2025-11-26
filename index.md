@@ -59,14 +59,16 @@ testimonials:
   videos:
     - name: "Маргарита"
       role: "сдает кабинет"
-      description: "Как стала экономить время, разместив свой кабинет на Аренда Вместе."
+      description: "Маргарита рассказывает как стала экономить время, разместив свой кабинет на Аренда Вместе."
+      telegram: "http://t.me/MargoShim"
       embed_url: "https://vkvideo.ru/video_ext.php?oid=-234209900&id=456239021&hash=72bd498f819a9dc7&hd=2"
       width: 360
       height: 640
     - name: "Елена"
       role: "снимает кабинет"
-      description: "Почему ей нравится снимать кабинет на Аренда Вместе."
-      embed_url: "https://vkvideo.ru/video_ext.php?oid=-234209900&id=456239022&autoplay=1"
+      description: "Елена делится почему ей нравится снимать кабинет на Аренда Вместе."
+      telegram: "http://t.me/Lena_taranowitch"
+      embed_url: "https://vkvideo.ru/video_ext.php?oid=-234209900&id=456239022&autoplay=0"
       width: 325
       height: 646
   images:
