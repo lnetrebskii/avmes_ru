@@ -5,7 +5,7 @@ description: "Владельцы кабинетов просят арендат�
 reading_time: 5 мин чтения
 permalink: /blog/kak-zashchitit-imushchestvo-foto-do-i-posle-arenda/
 excerpt_separator: <!--more-->
-image: /assets/images/posts/foto-zavershenie-arenda.png
+image: /assets/images/posts/kak-zashchitit-imushchestvo-foto-do-i-posle-arenda.png
 ---
 
 «У нас как в каршеринге — просим сфотографировать кабинет после аренды и отправить нам фото», — пишет владелец кабинета.
