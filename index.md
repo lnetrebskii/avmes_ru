@@ -148,7 +148,10 @@ pricing:
 cta:
   title: "Подключите офис сейчас"
   subtitle: "Разместите локацию самостоятельно или напишите нам напрямую"
-  action_text: "Зарегистрироватсья и разместить локацию"
+  primary_button_text: "Зарегистрироваться и разместить локацию"
+  primary_button_url: "https://arendavmeste.ru/?createOffice=true&autoAuth=true"
+  secondary_button_text: "Перейти на сайт"
+  secondary_button_url: "https://arendavmeste.ru"
 footer: false
 permalink: /
 ---

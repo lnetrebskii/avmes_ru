@@ -12,7 +12,9 @@ main_content: |
   У каждого свой набор вопросов и ситуация. Посмотрите демонстрацию системы или запишитесь на персональную консультацию.
 
 cta_demo_url: https://app.minutus.pro/book/EXM1VT8xQGZIAWdJwT03
-cta_demo_text: "Записаться на консультацию"
+cta_demo_text: "Записаться на демо"
+secondary_cta_text: "Перейти на сайт"
+secondary_cta_url: "https://arendavmeste.ru"
 
 demo_video:
   title: "Посмотрите, как это работает"
@@ -106,7 +108,11 @@ testimonials:
 
 cta:
   title: "Узнайте, как это работает для вас"
-  subtitle: "Посмотрите демонстрацию или запишитесь на персональную консультацию. Я покажу, как система решает именно ваши тревоги и вопросы."
+  subtitle: "Посмотрите демонстрацию или запишитесь на бесплатное демо. Я покажу, как система решает именно ваши тревоги и вопросы."
+  primary_button_text: "Записаться на демо"
+  primary_button_url: "https://app.minutus.pro/book/EXM1VT8xQGZIAWdJwT03"
+  secondary_button_text: "Перейти на сайт"
+  secondary_button_url: "https://arendavmeste.ru"
 
 permalink: /demo-landing/
 
