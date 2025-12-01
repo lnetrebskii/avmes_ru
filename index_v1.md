@@ -153,5 +153,5 @@ cta:
   secondary_button_text: "Перейти на сайт"
   secondary_button_url: "https://arendavmeste.ru"
 footer: false
-permalink: /
+permalink: /index_v1
 ---

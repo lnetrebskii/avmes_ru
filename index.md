@@ -114,6 +114,6 @@ cta:
   secondary_button_text: "Перейти на сайт"
   secondary_button_url: "https://arendavmeste.ru"
 
-permalink: /demo-landing/
+permalink: /
 
 ---
