@@ -1,0 +1,260 @@
+{% if testimonials.videos or testimonials.images or testimonials.items %}
+<section
+  id="testimonials"
+  class="bg-slate-50 py-16 dark:bg-slate-900/70"
+>
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center" data-motion="fadeInUp">
+      {% if testimonials.title %}
+      <h2 class="text-3xl font-bold text-slate-900 dark:text-white">{{ testimonials.title }}</h2>
+      {% endif %}
+    </div>
+    
+    {% comment %} Video Testimonials {% endcomment %}
+    {% if testimonials.videos and testimonials.videos.size > 0 %}
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16 max-w-6xl mx-auto">
+      {% for video in testimonials.videos %}
+      <div class="flex flex-col">
+        <div class="overflow-hidden rounded-xl bg-slate-900" style="aspect-ratio: 360/640;">
+          <iframe 
+            src="{{ video.embed_url }}" 
+            width="{{ video.width | default: 360 }}" 
+            height="{{ video.height | default: 640 }}"
+            class="h-full w-full"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" 
+            frameborder="0" 
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div class="pt-6">
+          {% if video.name %}
+          <div class="flex items-center gap-2">
+            <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">{{ video.name }}</h3>
+            {% if video.telegram %}
+            <a
+              href="{{ video.telegram }}"
+              target="_blank"
+              rel="noopener"
+              class="transition hover:scale-110 duration-300"
+              aria-label="Telegram {{ video.name }}"
+            >
+              <img
+                class="h-5 w-5 dark:invert"
+                src="{{ '/assets/images/contact_channels/telegram.svg' | relative_url }}"
+                alt="Telegram Icon"
+              />
+            </a>
+            {% endif %}
+          </div>
+          {% endif %}
+          {% if video.role %}
+          <p class="mt-1 text-base font-medium text-slate-600 dark:text-slate-400">{{ video.role }}</p>
+          {% endif %}
+          {% if video.description %}
+          <p class="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-300">{{ video.description }}</p>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    
+    {% comment %} Testimonial Images Gallery {% endcomment %}
+    {% if testimonials.images and testimonials.images.size > 0 %}
+    <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" data-motion="stagger-cards" id="testimonial-gallery">
+      {% for image in testimonials.images %}
+      <div class="testimonial-image-wrapper group relative aspect-[3/4] overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-800/60" data-motion="fadeInUp">
+        <img 
+          src="{{ image | relative_url }}" 
+          alt="Отзыв с Авито {{ forloop.index }}"
+          class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          loading="lazy"
+        />
+      </div>
+      {% endfor %}
+    </div>
+    
+    {% comment %} Link to full testimonials page {% endcomment %}
+    <div class="mt-8 text-center" data-motion="fadeInUp">
+      <a
+        href="{{ '/testimonials/' | relative_url }}"
+        class="inline-flex items-center justify-center rounded-md border border-slate-900 px-6 py-3 text-base font-semibold text-slate-900 transition-colors duration-200 hover:bg-slate-900 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 dark:border-slate-100 dark:text-slate-100 dark:hover:bg-slate-100/10 dark:focus-visible:outline-slate-100"
+      >
+        Смотреть все отзывы
+        <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+    {% elsif testimonials.items %}
+    {% comment %} Fallback to text testimonials if no images {% endcomment %}
+    <div class="mt-12 grid gap-6 md:grid-cols-2" data-motion="stagger-cards">
+      {% for testimonial in testimonials.items %}
+      <article class="flex h-full flex-col justify-between rounded-3xl border border-slate-200 bg-white px-6 py-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900/70" data-motion="fadeInUp">
+        {% if testimonial.text %}
+        <p class="text-lg leading-relaxed text-slate-700 dark:text-slate-200">"{{ testimonial.text | strip | remove: '"' }}"</p>
+        {% endif %}
+        <div class="mt-6 flex flex-col gap-1 text-sm text-slate-500 dark:text-slate-300">
+          {% if testimonial.author %}
+          <span class="font-semibold text-slate-900 dark:text-white">{{ testimonial.author }}</span>
+          {% endif %}
+          {% if testimonial.role %}
+          <span>{{ testimonial.role }}</span>
+          {% endif %}
+          {% if testimonial.date %}
+          <span class="text-xs uppercase tracking-wide text-slate-400 dark:text-slate-500">{{ testimonial.date }}</span>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    
+    {% comment %} Link to full testimonials page {% endcomment %}
+    <div class="mt-8 text-center" data-motion="fadeInUp">
+      <a
+        href="{{ '/testimonials/' | relative_url }}"
+        class="inline-flex items-center justify-center rounded-md border border-slate-900 px-6 py-3 text-base font-semibold text-slate-900 transition-colors duration-200 hover:bg-slate-900 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 dark:border-slate-100 dark:text-slate-100 dark:hover:bg-slate-100/10 dark:focus-visible:outline-slate-100"
+      >
+        Смотреть все отзывы
+        <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+{% comment %} Lightbox Modal for Testimonials {% endcomment %}
+<div id="testimonial-lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 p-4 backdrop-blur-sm" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Галерея отзывов">
+  <button 
+    id="lightbox-close" 
+    class="absolute right-4 top-4 z-10 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/50"
+    aria-label="Закрыть галерею"
+  >
+    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+  
+  <button 
+    id="lightbox-prev" 
+    class="absolute left-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 md:left-4 md:p-3"
+    aria-label="Предыдущее изображение"
+  >
+    <svg class="h-5 w-5 md:h-6 md:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+    </svg>
+  </button>
+  
+  <button 
+    id="lightbox-next" 
+    class="absolute right-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 md:right-4 md:p-3"
+    aria-label="Следующее изображение"
+  >
+    <svg class="h-5 w-5 md:h-6 md:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+  </button>
+  
+  <div class="relative max-h-full max-w-6xl w-full">
+    <img 
+      id="lightbox-image" 
+      src="" 
+      alt="Отзыв с Авито"
+      class="max-h-[85vh] max-w-full mx-auto rounded-lg object-contain"
+    />
+    <div id="lightbox-counter" class="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-black/70 px-4 py-2 text-sm text-white backdrop-blur-sm"></div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const lightbox = document.getElementById('testimonial-lightbox');
+  const lightboxImage = document.getElementById('lightbox-image');
+  const lightboxClose = document.getElementById('lightbox-close');
+  const lightboxPrev = document.getElementById('lightbox-prev');
+  const lightboxNext = document.getElementById('lightbox-next');
+  const lightboxCounter = document.getElementById('lightbox-counter');
+  const testimonialImages = document.querySelectorAll('.testimonial-image-wrapper');
+  
+  let currentIndex = 0;
+  let images = [];
+  
+  // Collect all image sources
+  testimonialImages.forEach(wrapper => {
+    const img = wrapper.querySelector('img');
+    if (img && img.src) {
+      images.push(img.src);
+    }
+  });
+  
+  function openLightbox(index) {
+    if (images.length === 0) return;
+    currentIndex = index;
+    updateLightboxImage();
+    lightbox.classList.remove('hidden');
+    lightbox.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+    lightbox.setAttribute('aria-hidden', 'false');
+  }
+  
+  function closeLightbox() {
+    lightbox.classList.add('hidden');
+    lightbox.classList.remove('flex');
+    document.body.style.overflow = '';
+    lightbox.setAttribute('aria-hidden', 'true');
+  }
+  
+  function updateLightboxImage() {
+    if (images.length === 0) return;
+    lightboxImage.src = images[currentIndex];
+    lightboxCounter.textContent = `${currentIndex + 1} / ${images.length}`;
+  }
+  
+  function showNext() {
+    if (images.length === 0) return;
+    currentIndex = (currentIndex + 1) % images.length;
+    updateLightboxImage();
+  }
+  
+  function showPrev() {
+    if (images.length === 0) return;
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateLightboxImage();
+  }
+  
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox);
+  }
+  if (lightboxPrev) {
+    lightboxPrev.addEventListener('click', showPrev);
+  }
+  if (lightboxNext) {
+    lightboxNext.addEventListener('click', showNext);
+  }
+  
+  if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+  }
+  
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox || lightbox.classList.contains('hidden')) return;
+    
+    if (e.key === 'Escape') {
+      closeLightbox();
+    } else if (e.key === 'ArrowLeft') {
+      showPrev();
+    } else if (e.key === 'ArrowRight') {
+      showNext();
+    }
+  });
+})();
+</script>
+{% endif %}
+

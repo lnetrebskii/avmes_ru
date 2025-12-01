@@ -1,0 +1,183 @@
+---
+layout: default
+---
+
+<section
+  id="main"
+  class="flex flex-col md:flex-row items-center justify-center py-16 md:h-screen border-b-2 dark:border-0"
+>
+  <div class="hidden md:block md:mx-2" data-motion="fadeInLeft">
+    <img
+      class="object-cover w-full h-full sm:w-80 sm:h-80 sm:rounded-full"
+      src="{{ page.image | relative_url | default: 'https://ik.imagekit.io/ikmedia/avif_samples/photo3_avif_6O32dW2NT.png' }}"
+      alt="{{ page.description }}"
+    />
+  </div>
+  <div class="fadeIn mx-4 w-4/5 md:w-2/5 text-center md:text-left mt-6 md:mt-0">
+    <div class="prose md:prose-lg prose-h1:text-4xl prose-h2:text-3xl prose-h1:mb-1 dark:prose-invert">
+      {{ page.main_content | markdownify }}
+    </div>
+    <div class="mt-8 flex flex-col gap-4 md:flex-row md:items-center">
+      {% if page.cta_demo_url %}
+      <a
+        href="{{ page.cta_demo_url }}"
+        target="_blank"
+        rel="noopener"
+        class="inline-flex w-full md:w-auto items-center justify-center rounded-md bg-slate-900 px-6 py-3 text-lg font-semibold text-white shadow-lg transition-colors duration-200 hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-slate-200 dark:focus-visible:outline-slate-100"
+      >
+        {{ page.cta_demo_text | default: "Записаться на демо" }}
+      </a>
+      {% endif %}
+      {% if page.secondary_cta_text and page.secondary_cta_url %}
+      <a
+        href="{{ page.secondary_cta_url }}"
+        class="inline-flex w-full md:w-auto items-center justify-center rounded-md border border-slate-900 px-6 py-3 text-lg font-semibold text-slate-900 transition-colors duration-200 hover:bg-slate-900 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 dark:border-slate-100 dark:text-slate-100 dark:hover:bg-slate-100/10 dark:focus-visible:outline-slate-100"
+      >
+        {{ page.secondary_cta_text }}
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% if page.problem and page.problem.items %}
+<section
+  id="problem"
+  class="bg-white py-16 dark:bg-slate-950"
+>
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center" data-motion="fadeInUp">
+      {% if page.problem.title %}
+      <h2 class="text-3xl font-bold text-slate-900 dark:text-white">{{ page.problem.title }}</h2>
+      {% endif %}
+      {% if page.problem.description %}
+      <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
+        {{ page.problem.description }}
+      </p>
+      {% endif %}
+    </div>
+    <div class="mt-12 grid gap-8 md:grid-cols-2" data-motion="stagger-cards">
+      {% for item in page.problem.items %}
+      <article
+        class="flex flex-col rounded-2xl border border-slate-200 bg-slate-50 px-8 py-10 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-700 dark:bg-slate-900/60"
+        data-motion="fadeInUp"
+      >
+        {% if item.title %}
+        <h3 class="text-xl font-semibold text-slate-900 dark:text-white">{{ item.title }}</h3>
+        {% endif %}
+        {% if item.description %}
+        <p class="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-300">{{ item.description }}</p>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if page.solution %}
+<section
+  id="solution"
+  class="bg-slate-50 py-16 dark:bg-slate-900/60"
+>
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center" data-motion="fadeInUp">
+      {% if page.solution.title %}
+      <h2 class="text-3xl font-bold text-slate-900 dark:text-white">{{ page.solution.title }}</h2>
+      {% endif %}
+    </div>
+    <div class="mt-12 grid gap-10 lg:grid-cols-[1.1fr,1fr] lg:items-start" data-motion="stagger-cards">
+      {% if page.solution.steps %}
+      <div class="relative" data-motion="fadeInUp">
+        <div class="absolute left-4 top-6 bottom-6 w-px bg-slate-200 dark:bg-slate-700"></div>
+        <div class="space-y-6">
+          {% for step in page.solution.steps %}
+          <div class="relative pl-12" data-motion="fadeInUp">
+            <span class="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-slate-900 text-sm font-semibold text-white shadow-lg dark:bg-slate-100 dark:text-slate-900">
+              {{ forloop.index }}
+            </span>
+            <div class="rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-700 dark:bg-slate-900/60">
+              <p class="text-base font-medium leading-snug text-slate-800 dark:text-slate-100">{{ step }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      <div class="rounded-2xl border border-slate-200 bg-white px-6 py-8 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-700 dark:bg-slate-800/60" data-motion="fadeInUp">
+        {% if page.solution.how_it_works_title %}
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">{{ page.solution.how_it_works_title }}</h3>
+        {% endif %}
+        {% if page.solution.how_it_works_body %}
+        <p class="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-300">
+          {{ page.solution.how_it_works_body }}
+        </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% include advantages_section.html advantages=page.advantages %}
+
+{% include testimonials_section.html testimonials=page.testimonials %}
+
+{% if page.cta %}
+<section
+  id="contact"
+  class="bg-slate-900 py-16 text-white dark:bg-slate-900"
+>
+  {% assign contacts = site.contact_channels %}
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center" data-motion="fadeInUp">
+      {% if page.cta.title %}
+      <h2 class="text-3xl font-bold">{{ page.cta.title }}</h2>
+      {% endif %}
+      {% if page.cta.subtitle %}
+      <p class="mt-3 text-lg text-slate-300">{{ page.cta.subtitle }}</p>
+      {% endif %}
+      {% if page.cta_demo_url %}
+      <div class="mt-8">
+        <a
+          href="{{ page.cta_demo_url }}"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white px-8 py-3 text-base font-semibold text-slate-900 shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl"
+        >
+          {{ page.cta_demo_text | default: "Записаться на демо" }}
+        </a>
+      </div>
+      {% endif %}
+
+      <div class="mt-10 space-y-3 text-base leading-relaxed text-slate-200">
+        <p>
+          🔗
+          <a href="https://arendavmeste.ru/?createOffice=true&autoAuth=true" target="_blank" rel="noopener"
+            class="underline decoration-2 underline-offset-2 text-white">
+            arendavmeste.ru ↗
+          </a>
+        </p>
+        {% if contacts.email %}
+        <p>
+          📧
+          <a href="mailto:{{ contacts.email }}" class="underline decoration-2 underline-offset-2 text-white">
+            {{ contacts.email }}
+          </a>
+        </p>
+        {% endif %}
+        {% if contacts.telegram %}
+        <p>
+          💬
+          <a href="{{ contacts.telegram }}" target="_blank" rel="noopener"
+            class="underline decoration-2 underline-offset-2 text-white">
+            @kindofdev
+          </a>
+        </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+

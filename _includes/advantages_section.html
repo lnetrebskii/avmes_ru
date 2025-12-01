@@ -1,0 +1,29 @@
+{% if advantages %}
+<section
+  id="advantages"
+  class="bg-white py-16 dark:bg-slate-950"
+>
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center" data-motion="fadeInUp">
+      {% if advantages.title %}
+      <h2 class="text-3xl font-bold text-slate-900 dark:text-white">{{ advantages.title }}</h2>
+      {% endif %}
+    </div>
+    {% if advantages.items %}
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-3" data-motion="stagger-cards">
+      {% for advantage in advantages.items %}
+      <article class="rounded-3xl border border-slate-200 bg-white px-6 py-8 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900/60" data-motion="fadeInUp">
+        {% if advantage.title %}
+        <h3 class="text-xl font-semibold text-slate-900 dark:text-white">{{ advantage.title }}</h3>
+        {% endif %}
+        {% if advantage.description %}
+        <p class="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-300">{{ advantage.description }}</p>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
