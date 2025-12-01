@@ -4,7 +4,7 @@ title: "Сдаёте кабинет вручную?"
 description: >
   Автоматизация субаренды без лишних сложностей. 
   Уберите рутину и получите больше времени на то, что вам действительно важно.
-telegram_url: https://t.me/ArendaVmeste
+telegram_url: https://t.me/ArendaVmeste/29
 
 channel_for:
   title: Телеграм-канал для тех, кто уже сдаёт кабинет
