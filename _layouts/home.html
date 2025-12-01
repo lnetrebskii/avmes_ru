@@ -55,6 +55,16 @@ layout: default
       </a>
       {% endif %}
     </div>
+    
+    {% comment %} Scroll indicator for mobile {% endcomment %}
+    <div class="md:hidden mt-12 flex flex-col items-center animate-bounce">
+      <a href="#{% if page.stats %}economics{% elsif page.problem %}problem{% else %}content{% endif %}" class="text-slate-600 dark:text-slate-400 text-sm font-medium mb-2">
+        {% if page.scroll_hint_text %}{{ page.scroll_hint_text }}{% else %}Читать решение{% endif %}
+      </a>
+      <svg class="w-6 h-6 text-slate-400 dark:text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </div>
   </div>
 </section>
 
