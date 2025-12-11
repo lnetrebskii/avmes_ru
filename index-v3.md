@@ -114,7 +114,7 @@ cta:
   secondary_button_text: "Посмотреть сайт"
   secondary_button_url: "https://arendavmeste.ru"
 
-permalink: /idp/
+permalink: /
 
 ---
 
