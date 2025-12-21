@@ -19,7 +19,7 @@ secondary_cta_url: "https://arendavmeste.ru"
 demo_video:
   title: "Посмотрите, как это работает"
   description: "Демонстрация системы от создателя. Без технических деталей — только то, что важно."
-  embed_url: "https://vkvideo.ru/video_ext.php?oid=-234209900&id=456239023&hash=914658bc9191a342&hd=3"
+  embed_url: "https://vk.com/video_ext.php?oid=-234209900&id=456239024&autoplay=1"
   width: 1280
   height: 720
 
