@@ -14,7 +14,7 @@ main_content: |
 cta_demo_url: https://app.minutus.pro/book/EXM1VT8xQGZIAWdJwT03
 cta_demo_text: "Записаться на демо"
 secondary_cta_text: "Подписаться на канал"
-secondary_cta_url: "https://t.me/ArendaVmeste"
+secondary_cta_url: "https://t.me/ArendaVmeste/47"
 
 demo_video:
   title: "Посмотрите, как это работает"
@@ -114,7 +114,7 @@ cta:
   primary_button_text: "Записаться на демо"
   primary_button_url: "https://app.minutus.pro/book/EXM1VT8xQGZIAWdJwT03"
   secondary_button_text: "Подписаться на канал"
-  secondary_button_url: "https://t.me/ArendaVmeste"
+  secondary_button_url: "https://t.me/ArendaVmeste/47"
 
 permalink: /
 
