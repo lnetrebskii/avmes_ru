@@ -13,8 +13,8 @@ main_content: |
 
 cta_demo_url: https://app.minutus.pro/book/EXM1VT8xQGZIAWdJwT03
 cta_demo_text: "Записаться на демо"
-secondary_cta_text: "Посмотреть сайт"
-secondary_cta_url: "https://arendavmeste.ru"
+secondary_cta_text: "Подписаться на канал"
+secondary_cta_url: "https://t.me/ArendaVmeste"
 
 demo_video:
   title: "Посмотрите, как это работает"
@@ -110,11 +110,11 @@ testimonials:
 
 cta:
   title: "Узнайте, как это работает для вас"
-  subtitle: "Посмотрите демонстрацию или запишитесь на бесплатное демо. Я покажу, как система решает именно ваши задачи и интегрируется с вашим процессом."
+  subtitle: "Запишитесь на бесплатное демо — покажу, как система решает именно ваши задачи. Или подпишитесь на канал, чтобы узнать больше."
   primary_button_text: "Записаться на демо"
   primary_button_url: "https://app.minutus.pro/book/EXM1VT8xQGZIAWdJwT03"
-  secondary_button_text: "Посмотреть сайт"
-  secondary_button_url: "https://arendavmeste.ru"
+  secondary_button_text: "Подписаться на канал"
+  secondary_button_url: "https://t.me/ArendaVmeste"
 
 permalink: /
 
